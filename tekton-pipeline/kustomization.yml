@@ -15,4 +15,4 @@ resources:
 - tasks/build-task.yml
 - tasks/argocd-task.yml
 - pipelines/build-deploy-pipeline.yml
-#- triggers/build-deploy-trigger.yml
+- triggers/build-deploy-trigger.yml
