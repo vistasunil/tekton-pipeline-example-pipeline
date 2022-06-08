@@ -33,6 +33,6 @@ spec:
       command:
         - /kaniko/executor
       args:
-        - --dockerfile=Dockerfile #$(params.pathToContext)/$(params.pathToDockerFile)
-        - --destination=https://hub.docker.com/repository/docker/vistasunil/testargo:latest #$(resources.outputs.image-registry.url)/$(DOCKER_NAMESPACE)/$(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
-        - --context=/workspace/ #$(params.pathToContext)
+        - --dockerfile=$(params.pathToContext)/$(params.pathToDockerFile)
+        - --destination=$(resources.outputs.image-registry.url)/$(DOCKER_NAMESPACE)/$(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
+        - --context=$(params.pathToContext)
