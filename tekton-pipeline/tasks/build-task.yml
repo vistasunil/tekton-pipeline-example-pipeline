@@ -14,10 +14,10 @@ spec:
   params:
     - name: pathToDockerFile
       description: Path to Dockerfile
-      default: Dockerfile
+      default: ./Dockerfile
     - name: pathToContext
       description: The build context used by Kaniko
-      default: /workspace/git-app-repo
+      default: ./ #/workspace/git-app-repo
 
   # Get our Docker image details from the build-task-configmap configmap
   stepTemplate:
