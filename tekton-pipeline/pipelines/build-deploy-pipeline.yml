@@ -17,7 +17,7 @@ spec:
         - name: pathToDockerFile
           value: ./Dockerfile
         - name: pathToContext
-          value: ./ #/workspace/git-app-repo
+          value: /workspace/git-app-repo
       resources:
         inputs:
           - name: git-app-repo
