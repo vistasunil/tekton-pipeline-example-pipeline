@@ -29,7 +29,7 @@
       params:
       - name: url
         # Replace <docker_registry_name> with your docker registry name (e.g. my-acr.azurecr.io)
-        value: 'hub.docker.com/r/vistasunil'
+        value: 'registry.hub.docker.com'
       type: image
     ---
     apiVersion: tekton.dev/v1alpha1
@@ -47,7 +47,7 @@
       resources:
       - name: git-app-repo
         resourceRef:
-          name: git-app-repo-$(uid)
+          name: git-app-repo
       - name: image-registry
         resourceRef:
-          name: image-registry-$(uid)
+          name: image-registry
